@@ -1,52 +1,96 @@
+body {
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 header {
     position: fixed;
     top: 0;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    background-color: #fff;
+    box-shadow: 0px -10px 30px #333;
 }
 
-.header-top {
-    max-width: 1200px;
-    margin: 0 auto;
+.header-info {
+    /* margin: 0 auto; */
     background-color: white;
+    display: flex;
+    align-items: center;
 }
 
 .header-logo,
-.header-top span {
+.header-tagline {
     display: inline-block;
-    padding: 20px;
-    width: 200px;
+    padding: 10px 20px;
+    /* width: 200px; */
+}
+
+.header-logo img {
+    border-radius: 50%;
+}
+
+.header-tagline {
+    font-style: italic;
+    font-family: Arial;
+    font-weight: bold;
 }
 
 nav {
-    background-color: rgb(176, 196, 222);
+    /* background-color: #87ceeb; */
+    display: flex;
 }
 
-.main-menu {
+.header-menu {
     display: flex;
+    align-items: center;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.main-menu > li {
-    width: 200px;
+.header-menu > li,
+.header-menu > a {
+    /* width: 200px; */
     padding: 20px;
-    font-weight: bold;
+    font-weight: 500;
+    font-family: Arial;
+    text-transform: uppercase;
+}
+
+.header-menu a {
+    color: #333;
+    text-decoration: none;
+    transition: 0.2s color;
+}
+
+.header-menu a:hover {
+    color: #7ec0ee;
 }
 
 .sub-menu {
     display: none;
     position: absolute;
-    top: 112px;
+    top: 70px;
     margin-left: -20px;
-    background-color: rgba(176, 196, 222, 0.5);
+    /* background-color: rgba(176, 196, 222, 0.5); */
+    background-color: #fff;
+    box-shadow: 0px 15px 30px -10px #333;
 }
 
 .sub-menu li {
     padding: 20px;
 }
 
-.main-menu >li:hover .sub-menu {
+.header-menu >li:hover .sub-menu {
     display: block;
 }
 
@@ -58,7 +102,7 @@ main {
     margin-right: auto;
     margin-top: 112px;
     box-sizing: border-box;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 .column {
